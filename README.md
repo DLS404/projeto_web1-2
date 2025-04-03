@@ -24,6 +24,6 @@ Este é um projeto de cadastro e listagem de itens utilizando HTML, CSS e JavaSc
 
 
 ## 👥 Integrantes
-Danielle Lima da Silva - 2222130001
+- Danielle Lima da Silva - 2222130001
 
-Bianca Cristina da Silva Barros - 2222130003
+- Bianca Cristina da Silva Barros - 2222130003
