@@ -23,7 +23,7 @@ Este é um projeto de cadastro e listagem de itens utilizando HTML, CSS e JavaSc
 8. Visualizar o projeto final: npm run preview
 
 
-##👥 Integrantes
+## 👥 Integrantes
 Danielle Lima da Silva - 2222130001
 
 Bianca Cristina da Silva Barros - 2222130003
