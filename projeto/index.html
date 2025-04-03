@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Livros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Livros</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" data-section="adicionar">Adicionar Livro</a></li>
+                <li><a href="#" class="nav-link" data-section="catalogo">Catálogo</a></li>
+                <li><a href="#" class="nav-link" data-section="estatisticas">Estatísticas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="adicionar" class="section active">
+            <h2>Adicionar Novo Livro</h2>
+            <form id="livro-form">
+                <div class="form-group">
+                    <label for="titulo">Título*</label>
+                    <input type="text" id="titulo" name="titulo" required minlength="3">
+                    <span class="error-message" id="titulo-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="autor">Autor*</label>
+                    <input type="text" id="autor" name="autor" required>
+                    <span class="error-message" id="autor-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ano">Ano de Publicação</label>
+                    <input type="number" id="ano" name="ano" min="1000" max="2030">
+                </div>
+                
+                <div class="form-group">
+                    <label for="genero">Gênero</label>
+                    <select id="genero" name="genero">
+                        <option value="ficcao">Ficção</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="scifi">Ficção Científica</option>
+                        <option value="romance">Romance</option>
+                        <option value="misterio">Mistério</option>
+                        <option value="tecnico">Técnico</option>
+                        <option value="biografia">Biografia</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group" id="outro-genero-container" style="display: none;">
+                  <label for="outro-genero">Especifique o gênero</label>
+                  <input type="text" id="outro-genero" name="outro-genero">
+              </div>
+                
+                <div class="form-group">
+                    <label for="lido">Já li este livro</label>
+                    <input type="checkbox" id="lido" name="lido">
+                </div>
+                
+                
+                <button type="submit">Adicionar Livro</button>
+            </form>
+        </section>
+
+        <section id="catalogo" class="section">
+            <h2>Meu Catálogo</h2>
+            <div class="filtros">
+                <label for="filtrar-genero">Filtrar por gênero:</label>
+                <select id="filtrar-genero">
+                    <option value="todos">Todos</option>
+                    <option value="ficcao">Ficção</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="scifi">Ficção Científica</option>
+                    <option value="romance">Romance</option>
+                    <option value="misterio">Mistério</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="biografia">Biografia</option>
+                    <option value="outro">Outro</option>
+                </select>
+                
+                <label for="filtrar-lidos">Mostrar:</label>
+                <select id="filtrar-lidos">
+                    <option value="todos">Todos</option>
+                    <option value="lidos">Já lidos</option>
+                    <option value="nao-lidos">Não lidos</option>
+                </select>
+            </div>
+            
+            <div id="livros-container">
+                <p id="sem-livros">Nenhum livro cadastrado ainda.</p>
+                <div id="livros-grid"></div>
+            </div>
+        </section>
+
+        <section id="estatisticas" class="section">
+            <h2>Estatísticas</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total de Livros</h3>
+                    <p id="total-livros">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Livros Lidos</h3>
+                    <p id="livros-lidos">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Por Gênero</h3>
+                    <ul id="generos-stats"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Direitos Autorais 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
